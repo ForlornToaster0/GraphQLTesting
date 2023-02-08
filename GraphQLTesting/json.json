@@ -1,0 +1,23 @@
+mutation addAuthor{
+  addAuthor(input: {name: "Schiller"}) {
+    record {
+      id
+      name
+    }
+  }
+}
+
+mutation addBook {
+  addBook(input: {
+    author: "451aa206-a3c0-4df1-a3c5-5ba477a55b78"
+    title: "An die Freude"
+  }) {
+    record {
+      id
+     title
+     author {
+       name
+     } 
+    }
+  }
+}
